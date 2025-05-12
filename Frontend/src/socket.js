@@ -8,9 +8,7 @@ export const connectSocket = () => {
     // socket = io("http://localhost:3000"); // Replace with your server URL
     socket = io("https://chat-app-using-react-pzqj.onrender.com", {
       withCredentials: true,
-      extraHeaders: {
-        "my-custom-header": "abcd",
-      },
+      transports: ["websocket", "polling"], // Explicitly enable transports
     });
   }
   return socket;
