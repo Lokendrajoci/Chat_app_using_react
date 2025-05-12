@@ -10,8 +10,12 @@ app.use(express.json());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // Replace with your frontend URL
+    origin: [
+      "https://your-frontend-domain.onrender.com", // Your future frontend URL
+      "http://localhost:5173", // For local development
+    ], // Replace with your frontend URL
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 

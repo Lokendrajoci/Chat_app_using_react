@@ -1,0 +1,5 @@
+services:
+  - type: static
+    name: my-react-frontend
+    buildCommand: cd Frontend && npm install && npm run build
+    publish: Frontend/dist

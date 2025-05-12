@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect, useRef } from "react";
 import connectSocket from "./socket";
 import { Send, ImageIcon, X, Download, Smile } from "lucide-react";
